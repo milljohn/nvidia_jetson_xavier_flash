@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-sudo apt update && sudo apt upgrade -y
+#sudo apt update && sudo apt upgrade -y
 
-sudo apt install qemu-user-static libxml2-utils lz4 -y
+#sudo apt install qemu-user-static libxml2-utils lz4 -y
 
 echo "Jetson Linux (L4T) + Connect Tech BSP helper"
 echo "Jetson Linux page: https://developer.nvidia.com/embedded/jetson-linux-r3562"
@@ -75,4 +75,4 @@ echo "  cd ${WORKDIR}/Linux_for_Tegra"
 echo "  (then flash with the correct board config for your CTI carrier)"
 
 cd ${WORKDIR}/Linux_for_Tegra
-sudo ./flash.sh cti/xavier-I/rogue/base mmcblk0p1
+sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1
