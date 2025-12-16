@@ -70,9 +70,9 @@ cd Linux_for_Tegra/CTI-L4T
 sudo ./install.sh
 
 echo "-------------------------------------------------------------"
-echo "Done. Next steps are typically:"
-echo "  cd ${WORKDIR}/Linux_for_Tegra"
-echo "  (then flash with the correct board config for your CTI carrier)"
+echo "Done. Next steps:"
+echo "  Press and hold FR then press and release RST, hold FR for 3 seconds and release"
+echo "  sudo ./flash.sh"
 
-cd ${WORKDIR}/Linux_for_Tegra
-sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1
+#cd ${WORKDIR}/Linux_for_Tegra
+#sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1

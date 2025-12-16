@@ -53,5 +53,5 @@ WORKDIR /work
 
 # Entry point: expects your script to be mounted at /work/bootstrap_xavier.sh
 # (or change the name here to match your script filename)
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/work/bootstrap_xavier.sh"]
 

@@ -10,7 +10,13 @@ Download and flash utility using [JetPack 5.1.5 - L4T r35.6.2](https://connectte
 Documentation states Ubuntu 20.04 is required. Docker allows installation, but the connection seems to reset during flash which seems to reset the resource maping. Running the flash utility under Ubuntu 24.04 works. Some dependancies may need to be installed from the bootstrap script.
 
 ## Useage
-1. Install [Ubuntu 20.04](https://cdimage.ubuntu.com/releases/20.04/release/)
+1. ``./bootstrap.sh``
+    - This will run the scripts in order
+    - WARNING: This will remove all docker containers and images on the system
+2. ``./flash.sh``
+    - Runs under Ubuntu 24.04
+
+--1. Install [Ubuntu 20.04](https://cdimage.ubuntu.com/releases/20.04/release/)
     - [libvirt](https://github.com/winapps-org/winapps/blob/main/docs/libvirt.md) 
         - fails in the middle of flashing
         - loses usb connection
@@ -25,10 +31,12 @@ Documentation states Ubuntu 20.04 is required. Docker allows installation, but t
     - Downloads required files
     - Installs SDK
 3. ``cd BSP_ROOT/Linux_for_Tegra && sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1``
+--
 
 ## Notes
+Running `bootstrap.sh` will run all scripts in correct order. You only need to run `flash.sh` for each device.
 
-Working on Ubuntu 24.04 host. Used Docker to extract filesystem and SDK.
+--Working on Ubuntu 24.04 host. Used Docker to extract filesystem and SDK.
 1. ``sudo ./cleanup.sh``
 2. ``sudo ./build.sh``
 3. `` sudo ./start.sh``
@@ -36,5 +44,6 @@ Working on Ubuntu 24.04 host. Used Docker to extract filesystem and SDK.
     - Flash will probably fail
     - ``exit``
 5. ``cd BSP_ROOT/Linux_for_Tegra && sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1``
+--
 
 
