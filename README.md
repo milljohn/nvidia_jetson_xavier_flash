@@ -16,7 +16,8 @@ Documentation states Ubuntu 20.04 is required. Docker allows installation, but t
 2. ``./flash.sh``
     - Runs under Ubuntu 24.04
 
---1. Install [Ubuntu 20.04](https://cdimage.ubuntu.com/releases/20.04/release/)
+
+~~1. Install [Ubuntu 20.04](https://cdimage.ubuntu.com/releases/20.04/release/)
     - [libvirt](https://github.com/winapps-org/winapps/blob/main/docs/libvirt.md) 
         - fails in the middle of flashing
         - loses usb connection
@@ -30,18 +31,18 @@ Documentation states Ubuntu 20.04 is required. Docker allows installation, but t
     - Installs dependancies
     - Downloads required files
     - Installs SDK
-3. ``cd BSP_ROOT/Linux_for_Tegra && sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1``--
+3. ``cd BSP_ROOT/Linux_for_Tegra && sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1``~~
 
 ## Notes
 Running `bootstrap.sh` will run all scripts in correct order. You only need to run `flash.sh` for each device.
 
---Working on Ubuntu 24.04 host. Used Docker to extract filesystem and SDK.
+~~Working on Ubuntu 24.04 host. Used Docker to extract filesystem and SDK.--
 1. ``sudo ./cleanup.sh``
 2. ``sudo ./build.sh``
 3. `` sudo ./start.sh``
 4. ``./bootstrap_xavier.sh``
     - Flash will probably fail
     - ``exit``
-5. ``cd BSP_ROOT/Linux_for_Tegra && sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1``--
+5. ``cd BSP_ROOT/Linux_for_Tegra && sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1``~~
 
 
