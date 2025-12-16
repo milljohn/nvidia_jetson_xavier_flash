@@ -30,8 +30,7 @@ Documentation states Ubuntu 20.04 is required. Docker allows installation, but t
     - Installs dependancies
     - Downloads required files
     - Installs SDK
-3. ``cd BSP_ROOT/Linux_for_Tegra && sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1``
---
+3. ``cd BSP_ROOT/Linux_for_Tegra && sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1``--
 
 ## Notes
 Running `bootstrap.sh` will run all scripts in correct order. You only need to run `flash.sh` for each device.
@@ -43,7 +42,6 @@ Running `bootstrap.sh` will run all scripts in correct order. You only need to r
 4. ``./bootstrap_xavier.sh``
     - Flash will probably fail
     - ``exit``
-5. ``cd BSP_ROOT/Linux_for_Tegra && sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1``
---
+5. ``cd BSP_ROOT/Linux_for_Tegra && sudo ./flash.sh cti/xavier/rogue/base mmcblk0p1``--
 
 
